@@ -1,0 +1,49 @@
+.footer{
+    width: 100%;
+    background-color: #f0f0f0;
+    height: 200px;
+    z-index: 999;
+}
+.sectionWrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 40px;
+    z-index: 999;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 90px;
+}
+.sectionTitleImg{
+    width: 234px;
+    height: 21px;
+}
+.sectionTitleText{
+    font-size: 14px;
+    margin: 3px 0;
+    font-weight: bold;
+    letter-spacing: .33px;
+    color: #3f3d56;
+}
+.sectionDesc{
+    font-size: 10px;
+    letter-spacing: .24px;
+    color: #3f3d56;
+    margin-top: 14px;
+    line-height: 15px;
+}
+.socialImgWrapper{
+    display: flex;
+    align-items: center;
+}
+.socialImg{
+    width: 24px;
+    height: 24px;
+    padding: 9px;
+    background-color: #ffffff;
+    margin: 0 16px;
+    border-radius: 50%;
+}
