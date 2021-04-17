@@ -1,0 +1,27 @@
+body {
+    position: relative;
+}
+
+.tabbar {
+    position: fixed;
+    top: 600px;
+    margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+    left: 0;
+    right: 0;
+    /* left: 60px; */
+    z-index: 9999;
+    height: 58px;
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 29px;
+    padding: 0 30px;
+    box-shadow: 0 0 10px 0 rgba(34, 34, 34, 0.25);
+    background-color: #fefffe;
+}
+
+.navItem {
+    width: 24px;
+    height: 24px;
+}
