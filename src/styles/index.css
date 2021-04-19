@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'SpoqaHanSans';
+    font-weight: 700;
+    src: local('Spoqa Han Sans Bold'),
+        url('../assets/fonts/SpoqaHanSans/SpoqaHanSansBold.woff2') format('woff2'),
+        url('../assets/fonts/SpoqaHanSans/SpoqaHanSansBold.woff') format('woff'),
+        url('../assets/fonts/SpoqaHanSans/SpoqaHanSansBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SpoqaHanSans';
+    font-weight: 400;
+    src: local('Spoqa Han Sans Regular'),
+        url('../assets/fonts/SpoqaHanSans/SpoqaHanSansRegular.woff2') format('woff2'),
+        url('../assets/fonts/SpoqaHanSans/SpoqaHanSansRegular.woff') format('woff'),
+        url('../assets/fonts/SpoqaHanSans/SpoqaHanSansRegular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SpoqaHanSans';
+    font-weight: 300;
+    src: local('Spoqa Han Sans Light'),
+        url('../assets/fonts/SpoqaHanSans/SpoqaHanSansLight.woff2') format('woff2'),
+        url('../assets/fonts/SpoqaHanSans/SpoqaHanSansLight.woff') format('woff'),
+        url('../assets/fonts/SpoqaHanSans/SpoqaHanSansLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SpoqaHanSans';
+    font-weight: 100;
+    src: local('Spoqa Han Sans Thin'),
+        url('../assets/fonts/SpoqaHanSans/SpoqaHanSansThin.woff2') format('woff2'),
+        url('../assets/fonts/SpoqaHanSans/SpoqaHanSansThin.woff') format('woff'),
+        url('../assets/fonts/SpoqaHanSans/SpoqaHanSansThin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'VisueltPro';
+    font-weight: 700;
+    src: local('VisueltPro'), url('../assets/fonts/VisueltPro/VisueltPro-Bold.woff2') format('woff2'),
+        url('../assets/fonts/VisueltPro/VisueltPro-Bold.woff') format('woff'),
+        url('../assets/fonts/VisueltPro/VisueltPro-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'VisueltPro';
+    font-weight: 400;
+    src: local('VisueltPro'), url('../assets/fonts/VisueltPro/VisueltPro-Regular.woff2') format('woff2'),
+        url('../assets/fonts/VisueltPro/VisueltPro-Regular.woff') format('woff'),
+        url('../assets/fonts/VisueltPro/VisueltPro-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'VisueltPro';
+    font-weight: 300;
+    src: local('VisueltPro'), url('../assets/fonts/VisueltPro/VisueltPro-Light.woff2') format('woff2'),
+        url('../assets/fonts/VisueltPro/VisueltPro-Light.woff') format('woff'),
+        url('../assets/fonts/VisueltPro/VisueltPro-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'VisueltPro';
+    font-weight: 100;
+    src: local('VisueltPro'), url('../assets/fonts/VisueltPro/VisueltPro-Thin.woff2') format('woff2'),
+        url('../assets/fonts/VisueltPro/VisueltPro-Thin.woff') format('woff'),
+        url('../assets/fonts/VisueltPro/VisueltPro-Thin.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+}
