@@ -4,11 +4,10 @@ body {
 
 .tabbar {
     position: fixed;
-    top: 600px;
-    margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+    bottom: 0px;
+    margin: 5% auto;
     left: 0;
     right: 0;
-    /* left: 60px; */
     z-index: 9999;
     height: 58px;
     width: 180px;
@@ -24,20 +23,4 @@ body {
 .navItem {
     width: 24px;
     height: 24px;
-}
-
-@media (min-height: 800px) and (max-height: 900px) {
-    .tabbar {
-        top: 700px;
-    }
-}
-@media (min-height: 700px) and (max-height: 800px) {
-    .tabbar {
-        top: 650px;
-    }
-}
-@media (min-height: 600px) and (max-height: 700px) {
-    .tabbar {
-        top: 580px;
-    }
 }
