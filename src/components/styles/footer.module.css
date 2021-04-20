@@ -1,49 +1,141 @@
-.footer{
+.footer {
+    font-family: SpoqaHanSans;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    padding: 50px 0;
     background-color: #f0f0f0;
-    height: 200px;
     z-index: 999;
 }
-.sectionWrapper{
+.sectionWrapper {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 40px;
     z-index: 999;
 }
-.section{
+.sectionBottom {
+    display: flex;
+    justify-content: center;
+}
+.sectionLeft {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.sectionRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-right: 90px;
 }
-.sectionTitleImg{
+.sectionTitleImg {
     width: 234px;
     height: 21px;
 }
-.sectionTitleText{
+.sectionTitleText {
     font-size: 14px;
     margin: 3px 0;
     font-weight: bold;
-    letter-spacing: .33px;
+    letter-spacing: 0.33px;
     color: #3f3d56;
 }
-.sectionDesc{
-    font-size: 10px;
-    letter-spacing: .24px;
+.sectionDesc {
+    font-size: 13px;
+    letter-spacing: 0.5px;
     color: #3f3d56;
     margin-top: 14px;
     line-height: 15px;
 }
-.socialImgWrapper{
+.socialImgWrapper {
     display: flex;
     align-items: center;
 }
-.socialImg{
+.socialImg {
     width: 24px;
     height: 24px;
     padding: 9px;
     background-color: #ffffff;
     margin: 0 16px;
     border-radius: 50%;
+}
+
+@media (min-width: 420px) and (max-width: 1366px) {
+    .sectionWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        z-index: 999;
+        height: calc(100% - 60px);
+    }
+    .sectionBottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+    }
+    .sectionLeft {
+        display: flex;
+    }
+    .sectionRight {
+        display: flex;
+    }
+}
+
+@media (max-width: 420px) {
+    .footer {
+        width: 100%;
+        height: auto;
+        padding: 0 0 50px 0;
+    }
+    .sectionTitleImg {
+        margin: 20px 0 26px 0;
+    }
+    .sectionWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 20px auto 0 auto;
+    }
+    .sectionBottom {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .sectionLeft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sectionRight {
+        display: flex;
+    }
+    .sectionTitleText {
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0.33px;
+        margin: 0 0 5px 0;
+    }
+    .sectionDesc {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        text-align: center;
+        margin: 0;
+    }
+    .socialImgWrapper {
+        margin: 24px 0 40px 0;
+    }
 }
