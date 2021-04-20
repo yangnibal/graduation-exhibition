@@ -116,6 +116,10 @@ p {
 }
 
 @media (min-width: 420px) and (max-width: 1366px) {
+    .contentsWrapper {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 40px 20px;
+    }
     .contentImg {
         width: 256px;
         height: 256px;
@@ -204,7 +208,5 @@ p {
     .contentImg {
         width: 160px;
         height: 160px;
-    }
-    .bannerTitle {
     }
 }
