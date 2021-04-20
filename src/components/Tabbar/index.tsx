@@ -2,12 +2,12 @@ import React from 'react';
 import styles from '../styles/tabbar.module.css';
 import { Link } from 'react-router-dom';
 
-import Home from '../../assets/mobile/home.png';
-import Work from '../../assets/mobile/works.png';
-import Contact from '../../assets/mobile/contact.png';
-import SelHome from '../../assets/mobile/homesel.png';
-import SelWork from '../../assets/mobile/workssel.png';
-import SelContact from '../../assets/mobile/contactsel.png';
+import Home from '../../assets/images/mobile/home.png';
+import Work from '../../assets/images/mobile/works.png';
+import Contact from '../../assets/images/mobile/contact.png';
+import SelHome from '../../assets/images/mobile/homesel.png';
+import SelWork from '../../assets/images/mobile/workssel.png';
+import SelContact from '../../assets/images/mobile/contactsel.png';
 
 interface Props {
     type: 'HOME' | 'WORKS' | 'CONTACT';
