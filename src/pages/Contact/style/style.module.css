@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     width: 100%;
     height: calc(100vh - 200px);
     display: flex;
@@ -6,49 +6,123 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
-    top: 80px;
+    top: 0;
+    margin-top: 80px;
+    position: relative;
 }
-.backgroundOpacity{
-    opacity: .35;
-    background-color: #ffffff;
+.contactBg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     top: 0;
-    height: 100%;
-    width: 100%;
+    z-index: -9;
 }
-.contactBody{
+.contactBody {
     width: 499px;
     height: 236px;
 }
-.contactTitle{
+.contactTitle {
     margin-top: 40px;
-    width: 669px;
-    height: 72px;
+    width: 546px;
 }
-.contactDesc{
+.contactDesc {
+    font-family: SpoqaHanSans;
     font-size: 14px;
     color: #3f3d56;
     text-align: center;
     letter-spacing: 1px;
     font-weight: bold;
     line-height: 20px;
-    margin-top: 20px;
+    margin-top: 26px;
     margin-bottom: 50px;
 }
 
-@media (max-width: 1366px){
-    .contactBody{
+@media (min-width: 421px) and (max-width: 1366px) {
+    .contactBody {
         width: 410px;
         height: 193px;
     }
-    .contactTitle{
+    .contactTitle {
         width: 395px;
         height: 42px;
         margin-top: 65px;
     }
-    .contactDesc{
+    .contactDesc {
         margin-top: 35px;
         line-height: 1.5;
         font-size: 12px;
+    }
+}
+
+@media (max-width: 425px) {
+    .wrapper {
+        height: calc(100vh - 72px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 72px;
+    }
+    .contactBg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -9;
+    }
+    .contactBody {
+        width: 321px;
+        height: auto;
+        margin-top: 100px;
+    }
+    .contactTitle {
+        width: 236px;
+        height: auto;
+        margin-top: 32px;
+    }
+    .subtitle {
+        margin: 32px 0 0 0;
+        font-family: VisueltPro;
+        font-size: 32px;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 2px;
+        text-align: center;
+        color: #7b65ff;
+    }
+    .contactDesc {
+        margin: 20px 0;
+        line-height: 1.5;
+        font-size: 13px;
+    }
+    .demo {
+        width: 175px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        box-shadow: 0 0 12px 0 rgba(34, 34, 34, 0.15);
+        background-color: #ffffff;
+    }
+    .demoVideo {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+    }
+    .demoDesc {
+        font-family: VisueltPro;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: #7b65fd;
+    }
+}
+
+@media (max-width: 375px) {
+    .contactBody {
+        margin: 24px 0 0 0;
     }
 }
