@@ -5,7 +5,7 @@ import styles from './style/style.module.css';
 
 import MainBody from '../../assets/images/pc/main-body.png';
 import MainBodyMobile from '../../assets/images/mobile/main.png';
-import conteTitle from '../../assets/images/pc/title-conte.svg';
+import conteTitle from '../../assets/images/pc/conte-title.svg';
 import conteTitleMobile from '../../assets/images/mobile/title.png';
 import Video from '../../assets/images/common/ic-video.svg';
 import ScrollDown from '../../assets/images/pc/ic-scroll-down.svg';
