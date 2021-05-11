@@ -6,7 +6,7 @@ import Logo from '../../assets/images/common/logo-cont.svg';
 
 interface Props {
     type: 'HOME' | 'WORKS' | 'CONTACT';
-    isMobile: RegExpMatchArray | null;
+    isMobile: boolean | null;
 }
 
 const Header: React.FC<Props> = ({ type, isMobile }) => {

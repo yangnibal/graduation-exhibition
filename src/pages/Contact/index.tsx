@@ -11,10 +11,9 @@ import ContactTitleMobile from '../../assets/images/mobile/conte-contact.png';
 import Video from '../../assets/images/mobile/video.png';
 
 function Contact() {
-    const [isMobile, setIsMobile] = useState<RegExpMatchArray | null>(null);
-    const mobileDevices = /Mobile|iP(hone|od)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/;
+    const [isMobile, setIsMobile] = useState<boolean>(false);
 
-    useLayoutEffect(() => setIsMobile(navigator.userAgent.match(mobileDevices)), []);
+    useLayoutEffect(() => setIsMobile(navigator.userAgent.indexOf('Mobi') > -1), []);
     return (
         <Layout type="CONTACT" isMobile={isMobile}>
             <div className={styles.wrapper}>

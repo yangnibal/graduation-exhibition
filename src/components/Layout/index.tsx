@@ -6,7 +6,7 @@ import Tabbar from '../Tabbar';
 
 interface Props {
     type: 'HOME' | 'WORKS' | 'CONTACT';
-    isMobile: RegExpMatchArray | null;
+    isMobile: boolean | null;
 }
 
 const Layout: React.FC<Props> = ({ children, type, isMobile }) => {

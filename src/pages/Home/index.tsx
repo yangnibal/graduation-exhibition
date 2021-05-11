@@ -5,7 +5,7 @@ import styles from './style/style.module.css';
 
 import MainBody from '../../assets/images/pc/main-body.png';
 import MainBodyMobile from '../../assets/images/mobile/main.png';
-import conteTitle from '../../assets/images/pc/title-conte.svg';
+import conteTitle from '../../assets/images/pc/title-conte.png';
 import conteTitleMobile from '../../assets/images/mobile/title.png';
 import Video from '../../assets/images/common/ic-video.svg';
 import ScrollDown from '../../assets/images/pc/ic-scroll-down.svg';
@@ -19,8 +19,7 @@ import LeftIc from '../../assets/images/common/ic_left.svg';
 import RightIc from '../../assets/images/common/ic_right.svg';
 
 function Home() {
-    const [isMobile, setIsMobile] = useState<RegExpMatchArray | null>(null);
-    const mobileDevices = /Mobile|iP(hone|od)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/;
+    const [isMobile, setIsMobile] = useState<boolean>(false);
     const archives = [
         {
             img: Arc1,
@@ -57,8 +56,7 @@ function Home() {
             ),
         },
     ];
-
-    useLayoutEffect(() => setIsMobile(navigator.userAgent.match(mobileDevices)), []);
+    useLayoutEffect(() => setIsMobile(navigator.userAgent.indexOf('Mobi') > -1), []);
     return (
         <Layout type="HOME" isMobile={isMobile}>
             <div className={styles.wrapper}>

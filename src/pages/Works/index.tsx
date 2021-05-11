@@ -10,8 +10,7 @@ import Default from '../../assets/images/pc/3-d.png';
 
 function Works() {
     const [selected, setSelected] = useState(0);
-    const [isMobile, setIsMobile] = useState<RegExpMatchArray | null>(null);
-    const mobileDevices = /Mobile|iP(hone|od)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/;
+    const [isMobile, setIsMobile] = useState<boolean>(false);
 
     const categories = [
         {
@@ -65,7 +64,7 @@ function Works() {
         },
     ];
 
-    useLayoutEffect(() => setIsMobile(navigator.userAgent.match(mobileDevices)), []);
+    useLayoutEffect(() => setIsMobile(navigator.userAgent.indexOf('Mobi') > -1), []);
     return (
         <Layout type="WORKS" isMobile={isMobile}>
             <div className={styles.wrapper}>
