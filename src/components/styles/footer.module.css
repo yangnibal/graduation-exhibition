@@ -67,7 +67,7 @@
     border-radius: 50%;
 }
 
-@media (min-width: 420px) and (max-width: 1366px) {
+@media (min-width: 425px) and (max-width: 1366px) {
     .sectionWrapper {
         display: flex;
         flex-direction: column;
@@ -89,7 +89,7 @@
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 425px) {
     .footer {
         min-width: 100%;
         width: 100%;
