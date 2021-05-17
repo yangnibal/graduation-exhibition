@@ -115,7 +115,7 @@ p {
     color: #000000;
 }
 
-@media (min-width: 420px) and (max-width: 1366px) {
+@media (min-width: 425px) and (max-width: 1366px) {
     .contentsWrapper {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 40px 20px;
@@ -151,7 +151,6 @@ p {
         height: 44px;
         display: flex;
         justify-content: left;
-        flex-basis: 25%;
         margin: 0;
         box-shadow: 0 2px 4px 0 rgba(34, 34, 34, 0.25);
         overflow: scroll;
