@@ -1,4 +1,5 @@
-import { useState, useLayoutEffect } from 'react';
+import { useState, useLayoutEffect, useRef } from 'react';
+import smoothscroll from 'smoothscroll-polyfill';
 
 import Layout from '../../components/Layout';
 import styles from './style/style.module.css';
@@ -11,18 +12,31 @@ import Video from '../../assets/images/common/ic-video.svg';
 import ScrollDown from '../../assets/images/pc/ic-scroll-down.svg';
 import BgPaper from '../../assets/images/pc/bg-paper.png';
 import BgPaperMobile from '../../assets/images/mobile/bg-paper.png';
-import Arc1 from '../../assets/images/pc/3-d.png';
-import Arc2 from '../../assets/images/pc/graphic.png';
-import Arc3 from '../../assets/images/pc/ui.png';
-import Arc4 from '../../assets/images/pc/game.png';
 import LeftIc from '../../assets/images/common/ic_left.svg';
 import RightIc from '../../assets/images/common/ic_right.svg';
 
+import Arc3D from '../../assets/images/common/archive/3d.png';
+import ArcMotion from '../../assets/images/common/archive/motion.png';
+import ArcVideo from '../../assets/images/common/archive/video.png';
+import ArcUi from '../../assets/images/common/archive/ui.png';
+import ArcGraphic from '../../assets/images/common/archive/graphic.png';
+import ArcGame from '../../assets/images/common/archive/game.png';
+import ArcBranding from '../../assets/images/common/archive/branding.png';
+import ArcIllust from '../../assets/images/common/archive/illust.png';
+import ArcProduct from '../../assets/images/common/archive/product.png';
+
 function Home() {
+    smoothscroll.polyfill();
     const [isMobile, setIsMobile] = useState<boolean>(false);
+    const [scrollX, setScrollX] = useState<number>(0);
+
+    const scrollWrapBoxRef = useRef<HTMLDivElement>(null);
+    const archiveWrapRef = useRef<HTMLDivElement>(null);
+    const archiveRef = useRef<HTMLDivElement>(null);
+
     const archives = [
         {
-            img: Arc1,
+            img: Arc3D,
             desc: (
                 <div className={styles.boxDesc}>
                     3D
@@ -32,7 +46,7 @@ function Home() {
             ),
         },
         {
-            img: Arc2,
+            img: ArcMotion,
             desc: (
                 <div className={styles.boxDesc}>
                     MOTION
@@ -42,11 +56,11 @@ function Home() {
             ),
         },
         {
-            img: Arc3,
+            img: ArcVideo,
             desc: <div className={styles.boxDesc}>VIDEO</div>,
         },
         {
-            img: Arc4,
+            img: ArcUi,
             desc: (
                 <div className={styles.boxDesc}>
                     UI/UX
@@ -55,7 +69,83 @@ function Home() {
                 </div>
             ),
         },
+        {
+            img: ArcGraphic,
+            desc: (
+                <div className={styles.boxDesc}>
+                    GRAPHIC
+                    <br />
+                    DESIGN
+                </div>
+            ),
+        },
+        {
+            img: ArcGame,
+            desc: (
+                <div className={styles.boxDesc}>
+                    GAME
+                    <br />
+                    DESIGN
+                </div>
+            ),
+        },
+        {
+            img: ArcBranding,
+            desc: <div className={styles.boxDesc}>BRANDING</div>,
+        },
+        {
+            img: ArcIllust,
+            desc: (
+                <div className={styles.boxDesc}>
+                    ILLUST
+                    <br />
+                    DESIGN
+                </div>
+            ),
+        },
+        {
+            img: ArcProduct,
+            desc: (
+                <div className={styles.boxDesc}>
+                    PRODUCT
+                    <br />
+                    DESIGN
+                </div>
+            ),
+        },
     ];
+    const handleScroll = (direction: boolean) => {
+        if (!scrollWrapBoxRef.current || !archiveRef.current || !archiveWrapRef.current) return;
+
+        const archiveStyle = getComputedStyle(archiveRef.current);
+        const scrollSize = isMobile
+            ? parseInt(archiveStyle.width) +
+              parseInt(archiveStyle.marginLeft) +
+              parseInt(archiveStyle.marginRight)
+            : parseInt(archiveStyle.width) +
+              parseInt(archiveStyle.paddingLeft) +
+              parseInt(archiveStyle.paddingRight) +
+              parseInt(archiveStyle.marginLeft) +
+              parseInt(archiveStyle.marginRight);
+        console.log(scrollSize);
+        scrollWrapBoxRef.current.scrollBy({
+            top: 0,
+            left: direction ? scrollSize : -scrollSize,
+            behavior: 'smooth',
+        });
+    };
+    const mobileArchive = ({ index, length }: { index: number; length: number }) => {
+        let returnArchive = [];
+        for (var j = index; j < length; j++) {
+            returnArchive.push(
+                <article className={styles.box} key={index}>
+                    <img src={archives[j].img} className={styles.boxImg} />
+                    {archives[j].desc}
+                </article>
+            );
+        }
+        return returnArchive;
+    };
     useLayoutEffect(() => setIsMobile(navigator.userAgent.indexOf('Mobi') > -1), []);
     return (
         <Layout type="HOME" isMobile={isMobile}>
@@ -114,17 +204,33 @@ function Home() {
                 </div>
                 <div className={styles.archiveWrapper}>
                     <p className={styles.archiveTitle}>ARCHIVE</p>
-                    <div className={styles.boxWrapper}>
-                        {archives.map((el, i) => (
-                            <article className={styles.box} key={i}>
-                                <img src={el.img} className={styles.boxImg} />
-                                {el.desc}
-                            </article>
-                        ))}
+                    <div className={styles.boxScrollWrapper} ref={scrollWrapBoxRef}>
+                        {isMobile ? (
+                            <div className={styles.boxWrapperMobile} ref={archiveWrapRef}>
+                                {[
+                                    { index: 0, length: 4 },
+                                    { index: 4, length: 8 },
+                                    { index: 8, length: 9 },
+                                ].map((item) => (
+                                    <div className={styles.boxWrapper} ref={archiveRef}>
+                                        {mobileArchive(item).map((item) => item)}
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <div className={styles.boxWrapper} ref={archiveWrapRef}>
+                                {archives.map((el, i) => (
+                                    <article className={styles.box} key={i} ref={archiveRef}>
+                                        <img src={el.img} className={styles.boxImg} />
+                                        {el.desc}
+                                    </article>
+                                ))}
+                            </div>
+                        )}
                     </div>
                     <div className={styles.iconWrapper}>
-                        <img src={LeftIc} className={styles.icon} />
-                        <img src={RightIc} className={styles.icon} />
+                        <img src={LeftIc} className={styles.icon} onClick={() => handleScroll(false)} />
+                        <img src={RightIc} className={styles.icon} onClick={() => handleScroll(true)} />
                     </div>
                 </div>
             </div>

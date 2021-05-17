@@ -130,24 +130,33 @@
     font-weight: bold;
     margin-top: 150px;
 }
+.boxScrollWrapper {
+    width: 1336px;
+    overflow: hidden;
+    padding: 20px 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.boxScrollWrapper::-webkit-scrollbar {
+    display: none;
+}
 .boxWrapper {
+    position: relative;
+    left: 0;
+    width: fit-content;
     display: flex;
     flex-direction: row;
     margin-top: 70px;
     justify-content: space-between;
+    transition: all 0.2s;
 }
 .box {
+    display: inline-block;
     border-radius: 24px;
     box-shadow: 0 0 20px 0 rgba(34, 34, 34, 0.15);
     background-color: #ffffff;
     padding: 13px 13px 32px;
-    margin: 0 37px;
-}
-.box:first-child {
-    margin-left: 0;
-}
-.box:last-child {
-    margin-right: 0;
+    margin: 0 35px;
 }
 .boxImg {
     width: 238px;
@@ -166,7 +175,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 72px 0 80px 0;
+    margin: 52px 0 80px 0;
 }
 .icon {
     width: 36px;
@@ -187,17 +196,19 @@
     .contentDesc {
         margin-bottom: 60px;
     }
+    .boxScrollWrapper {
+        width: 1084px;
+        padding: 20px 10px;
+    }
     .box {
+        padding: 9px 9px 13px;
         margin: 0 10px;
     }
     .box:first-child {
         margin-left: 0;
     }
-    .box:last-child {
-        margin-right: 0;
-    }
     .boxImg {
-        width: 230px;
+        width: 238px;
         height: 299px;
     }
 }
@@ -287,23 +298,36 @@
         margin: 50px 0 35px 0;
         text-align: center;
     }
+    .boxScrollWrapper {
+        width: 370px;
+        display: flex;
+        padding: 20px 0;
+    }
+    .boxWrapperMobile {
+        position: relative;
+        left: 0;
+        width: fit-content;
+        display: flex;
+        position: relative;
+        transition: all 0.3s;
+    }
     .boxWrapper {
+        width: 340px;
+        flex-shrink: 0;
         display: grid;
+        grid-template-columns: 160px 160px;
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 12px;
-        column-gap: 15px;
-        align-items: center;
-        justify-items: center;
-        margin: 12px 15px 15px;
+        row-gap: 14px;
+        column-gap: 20px;
+        justify-content: center;
+        margin: 0 15px;
     }
     .box {
+        width: calc(100% - 16px);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        width: 148px;
-        height: 260px;
-        padding: 6px;
+        padding: 8px;
         border-radius: 12px;
         margin: 0;
         box-shadow: 0 0 20px 0 rgba(34, 34, 34, 0.15);
@@ -311,7 +335,7 @@
     }
     .boxImg {
         width: 100%;
-        height: 178px;
+        height: auto;
         object-fit: contain;
     }
     .boxDesc {
@@ -324,7 +348,7 @@
         line-height: normal;
         letter-spacing: 1px;
         color: #000000;
-        margin: 6px 0 0 3px;
+        margin: 6px 0 37px 3px;
     }
     .iconWrapper {
         display: flex;
@@ -343,8 +367,20 @@
     .archiveTitle {
         margin: 24px 0 20px 0;
     }
+    .boxScrollWrapper {
+        width: 340px;
+    }
     .boxWrapper {
-        margin: 0 18px;
+        width: 320px;
+        grid-template-columns: 150px 150px;
+        margin: 0 10px;
+        column-gap: 10px;
+    }
+    .box {
+        padding: 6px;
+    }
+    .boxDesc {
+        margin-bottom: 30px;
     }
     .iconWrapper {
         margin: 20px 0;
