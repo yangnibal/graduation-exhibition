@@ -5,7 +5,7 @@ import Header from '../Header';
 import Tabbar from '../Tabbar';
 
 interface Props {
-    type: 'HOME' | 'WORKS' | 'CONTACT';
+    type: 'HOME' | 'WORKS' | 'CONTACT' | 'LANDING';
     isMobile: boolean | null;
 }
 
@@ -17,7 +17,7 @@ const Layout: React.FC<Props> = ({ children, type, isMobile }) => {
             )}
             {isMobile && <Tabbar type={type} />}
             {children}
-            <Footer />
+            {type !== 'LANDING' && <Footer />}
         </div>
     );
 };

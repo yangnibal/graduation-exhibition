@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/common/logo-cont.svg';
 
 interface Props {
-    type: 'HOME' | 'WORKS' | 'CONTACT';
+    type: 'HOME' | 'WORKS' | 'CONTACT' | 'LANDING';
     isMobile: boolean | null;
 }
 
@@ -15,7 +15,7 @@ const Header: React.FC<Props> = ({ type, isMobile }) => {
             <div className={styles.logoContainer}>
                 <img src={Logo} className={styles.logo} />
             </div>
-            {!isMobile && (
+            {(!isMobile && type !== 'LANDING') && (
                 <div className={styles.textContainer}>
                     <Link to="/" className={type === 'HOME' ? styles.textBld : styles.textNml}>
                         HOME

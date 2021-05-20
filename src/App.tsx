@@ -7,7 +7,8 @@ function App() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path="/" component={Routes.Home} />
+                {/*<Route exact path="/" component={Routes.Home} />*/}
+                <Route exact path="/" component={Routes.Landing} />
                 <Route exact path="/works" component={Routes.Works} />
                 <Route exact path="/works/:id" component={Routes.WorkDetail} />
                 <Route exact path="/contact" component={Routes.Contact} />
