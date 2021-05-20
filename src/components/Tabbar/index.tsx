@@ -23,14 +23,14 @@ const Tabbar: React.FC<Props> = ({ type }) => {
                     <img src={Home} className={styles.navItem} />
                 )}
             </Link>
-            <Link to="/works" className={type === 'WORKS' ? styles.textBld : styles.textNml}>
+            <Link to={type === 'LANDING' ? "/" : "/works"} className={type === 'WORKS' ? styles.textBld : styles.textNml}>
                 {type === 'WORKS' ? (
                     <img src={SelWork} className={styles.navItem} />
                 ) : (
                     <img src={Work} className={styles.navItem} />
                 )}
             </Link>
-            <Link to="/contact" className={type === 'CONTACT' ? styles.textBld : styles.textNml}>
+            <Link to={type === 'LANDING' ? "/" : "/contact"}  className={type === 'CONTACT' ? styles.textBld : styles.textNml}>
                 {type === 'CONTACT' ? (
                     <img src={SelContact} className={styles.navItem} />
                 ) : (
