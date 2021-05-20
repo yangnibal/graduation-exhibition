@@ -27,10 +27,13 @@ import BannerGameMobile from '../../assets/images/mobile/banner/game.png';
 import BannerBrandingMobile from '../../assets/images/mobile/banner/branding.png';
 import BannerIllustMobile from '../../assets/images/mobile/banner/illust.png';
 import BannerProductMobile from '../../assets/images/mobile/banner/product.png';
+import { useHistory } from 'react-router-dom';
 
 function Works() {
     const [selected, setSelected] = useState(0);
     const [isMobile, setIsMobile] = useState<boolean>(false);
+
+    const history = useHistory()
 
     const categories = [
         {
@@ -130,7 +133,7 @@ function Works() {
                 </div>
                 <div className={styles.contentsWrapper}>
                     {[0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((_, i) => (
-                        <div className={styles.content} key={i}>
+                        <div className={styles.content} key={i} onClick={() => history.push(`/works/${i}`)}>
                             <img src={contents[0].profileImg} className={styles.contentImg} />
                             <p className={styles.contentTitle}>{contents[0].title}</p>
                             <div className={styles.contentUser}>
