@@ -10,27 +10,31 @@ import SelWork from '../../assets/images/mobile/workssel.png';
 import SelContact from '../../assets/images/mobile/contactsel.png';
 
 interface Props {
-    type: 'HOME' | 'WORKS' | 'CONTACT' | 'CONTENT';
+    type: 'HOME' | 'WORKS' | 'CONTACT' | 'LANDING' | 'CONTENT';
 }
 
 const Tabbar: React.FC<Props> = ({ type }) => {
     return (
         <div className={styles.tabbar}>
-            <Link to="/" className={type === 'HOME' ? styles.textBld : styles.textNml}>
+            <Link to="/" className={type === ('HOME' || 'LANDING') ? styles.textBld : styles.textNml}>
                 {type === 'HOME' ? (
                     <img src={SelHome} className={styles.navItem} />
                 ) : (
                     <img src={Home} className={styles.navItem} />
                 )}
             </Link>
-            <Link to="/works" className={type === 'WORKS' ? styles.textBld : styles.textNml}>
+            <Link
+                to={type === 'LANDING' ? '/' : '/works'}
+                className={type === 'WORKS' ? styles.textBld : styles.textNml}>
                 {type === 'WORKS' || type === 'CONTENT' ? (
                     <img src={SelWork} className={styles.navItem} />
                 ) : (
                     <img src={Work} className={styles.navItem} />
                 )}
             </Link>
-            <Link to="/contact" className={type === 'CONTACT' ? styles.textBld : styles.textNml}>
+            <Link
+                to={type === 'LANDING' ? '/' : '/contact'}
+                className={type === 'CONTACT' ? styles.textBld : styles.textNml}>
                 {type === 'CONTACT' ? (
                     <img src={SelContact} className={styles.navItem} />
                 ) : (
