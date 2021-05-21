@@ -1,7 +1,10 @@
 import { useState, useLayoutEffect } from 'react';
+import { useHistory } from 'react-router';
 
 import Layout from '../../components/Layout';
 import styles from './style/style.module.css';
+import articles from '../../articles.json';
+
 import BannerDesc from '../../assets/images/pc/banner-desc.png';
 import BannerDescMobile from '../../assets/images/mobile/banner-desc.png';
 import Default from '../../assets/images/common/archive/3d.png';
@@ -31,6 +34,7 @@ import BannerProductMobile from '../../assets/images/mobile/banner/product.png';
 function Works() {
     const [selected, setSelected] = useState(0);
     const [isMobile, setIsMobile] = useState<boolean>(false);
+    const history = useHistory();
 
     const categories = [
         {
@@ -46,8 +50,8 @@ function Works() {
             mobileBanner: Banner3DMobile,
         },
         {
-            label: 'MOTION',
-            value: 'MOTION',
+            label: 'MOTION GRAPHICS',
+            value: 'MOTION GRAPHICS',
             pcBanner: BannerMotionPc,
             mobileBanner: BannerMotionMobile,
         },
@@ -64,8 +68,8 @@ function Works() {
             mobileBanner: BannerUiMobile,
         },
         {
-            label: 'GRAPHIC',
-            value: 'GRAPHIC',
+            label: 'GRAPHIC DESIGN',
+            value: 'GRAPHIC DESIGN',
             pcBanner: BannerGraphicPc,
             mobileBanner: BannerGraphicMobile,
         },
@@ -104,7 +108,12 @@ function Works() {
         },
     ];
 
-    useLayoutEffect(() => setIsMobile(navigator.userAgent.indexOf('Mobi') > -1), []);
+    const handleRedirect = (id: string) => history.push(`/works/${id}`);
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+        setIsMobile(navigator.userAgent.indexOf('Mobi') > -1);
+    }, []);
     return (
         <Layout type="WORKS" isMobile={isMobile}>
             <div className={styles.wrapper}>
@@ -129,19 +138,40 @@ function Works() {
                     ))}
                 </div>
                 <div className={styles.contentsWrapper}>
-                    {[0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((_, i) => (
-                        <div className={styles.content} key={i}>
-                            <img src={contents[0].profileImg} className={styles.contentImg} />
-                            <p className={styles.contentTitle}>{contents[0].title}</p>
-                            <div className={styles.contentUser}>
-                                <img
-                                    src={contents[0].userProfileImg}
-                                    className={styles.contentUserProfileImg}
-                                />
-                                <p className={styles.contentUsername}>{contents[0].username}</p>
-                            </div>
-                        </div>
-                    ))}
+                    {articles.map((article, i) => {
+                        return (
+                            (categories[selected].label === 'ALL' ||
+                                article.field === categories[selected].label) && (
+                                <div
+                                    className={styles.content}
+                                    onClick={() => handleRedirect(article.id)}
+                                    key={i}>
+                                    <img
+                                        src={`https://sunrin-graphics.s3.ap-northeast-2.amazonaws.com/2021/${article.thumbnail}`}
+                                        className={styles.contentImg}
+                                    />
+                                    <div className={styles.contentInfo}>
+                                        <p className={styles.contentTitle}>{article.articleName}</p>
+                                        <div className={styles.contentUserWrapper}>
+                                            {article.studentId.map((id, idx) => (
+                                                <div className={styles.contentUser}>
+                                                    <img
+                                                        src={`https://sunrin-graphics.s3.ap-northeast-2.amazonaws.com/2021/${id}_profile.png`}
+                                                        className={styles.contentUserProfileImg}
+                                                    />
+                                                    {article.studentId.length > 1 && isMobile ? null : (
+                                                        <p className={styles.contentUsername}>
+                                                            {article.author[idx]}
+                                                        </p>
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        );
+                    })}
                 </div>
             </div>
         </Layout>
