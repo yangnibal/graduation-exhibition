@@ -10,7 +10,7 @@ import SelWork from '../../assets/images/mobile/workssel.png';
 import SelContact from '../../assets/images/mobile/contactsel.png';
 
 interface Props {
-    type: 'HOME' | 'WORKS' | 'CONTACT';
+    type: 'HOME' | 'WORKS' | 'CONTACT' | 'CONTENT';
 }
 
 const Tabbar: React.FC<Props> = ({ type }) => {
@@ -24,7 +24,7 @@ const Tabbar: React.FC<Props> = ({ type }) => {
                 )}
             </Link>
             <Link to="/works" className={type === 'WORKS' ? styles.textBld : styles.textNml}>
-                {type === 'WORKS' ? (
+                {type === 'WORKS' || type === 'CONTENT' ? (
                     <img src={SelWork} className={styles.navItem} />
                 ) : (
                     <img src={Work} className={styles.navItem} />

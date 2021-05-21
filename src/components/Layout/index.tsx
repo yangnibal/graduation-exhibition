@@ -5,7 +5,7 @@ import Header from '../Header';
 import Tabbar from '../Tabbar';
 
 interface Props {
-    type: 'HOME' | 'WORKS' | 'CONTACT';
+    type: 'HOME' | 'WORKS' | 'CONTACT' | 'CONTENT';
     isMobile: boolean | null;
 }
 

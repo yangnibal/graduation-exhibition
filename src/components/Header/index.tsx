@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/common/logo-cont.svg';
 
 interface Props {
-    type: 'HOME' | 'WORKS' | 'CONTACT';
+    type: 'HOME' | 'WORKS' | 'CONTACT' | 'CONTENT';
     isMobile: boolean | null;
 }
 
