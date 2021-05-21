@@ -5,13 +5,13 @@ p {
 .wrapper {
     font-family: VisueltPro;
     width: 100%;
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 295px);
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
     top: 0px;
-    margin-top: 80px;
+    padding-top: 80px;
 }
 .bannerWrapper {
     height: 262px;
@@ -79,25 +79,38 @@ p {
 .contentsWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 35px 35px;
+    gap: 0 35px;
     overflow-y: scroll;
     height: auto;
-    z-index: -99;
 }
 .content {
+    width: 225px;
     display: flex;
     flex-direction: column;
+    margin: 17px 0;
 }
 .contentImg {
     width: 225px;
     height: 225px;
     border-radius: 10px;
 }
+.contentInfo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .contentTitle {
     font-size: 14px;
     font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: #000000;
     margin-top: 10px;
+}
+.contentUserWrapper {
+    display: flex;
 }
 .contentUser {
     display: flex;
@@ -108,6 +121,7 @@ p {
     width: 24px;
     height: 24px;
     border-radius: 50%;
+    margin-right: 8px;
 }
 .contentUsername {
     font-size: 14px;
@@ -116,6 +130,9 @@ p {
 }
 
 @media (min-width: 425px) and (max-width: 1366px) {
+    .content {
+        width: 256px;
+    }
     .contentsWrapper {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 40px 20px;
@@ -128,6 +145,7 @@ p {
 
 @media (max-width: 425px) {
     .wrapper {
+        padding-top: 0;
         margin: 0;
     }
     .bannerWrapper {
@@ -176,22 +194,24 @@ p {
         cursor: pointer;
     }
     .contentsWrapper {
-        width: 100%;
+        width: calc(100% - 20px);
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        row-gap: 16px;
+        row-gap: 20px;
         column-gap: 15px;
-        align-items: center;
+        align-items: stretch;
         justify-items: center;
-        margin: 16px 12px;
+        margin: 16px 10px;
     }
     .content {
+        width: 165px;
         margin: 0;
+        justify-content: center;
     }
     .contentImg {
-        width: 176px;
-        height: 176px;
+        width: 165px;
+        height: 165px;
     }
     .bannerTitle {
         font-size: 24px;
@@ -201,11 +221,14 @@ p {
 }
 
 @media (max-width: 375px) {
+    .content {
+        width: 155px;
+    }
     .contentsWrapper {
-        margin: 16px 20px;
+        margin: 16px 10px;
     }
     .contentImg {
-        width: 160px;
-        height: 160px;
+        width: 155px;
+        height: 155px;
     }
 }
