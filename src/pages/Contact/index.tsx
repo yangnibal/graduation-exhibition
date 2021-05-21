@@ -13,7 +13,10 @@ import Video from '../../assets/images/mobile/video.png';
 function Contact() {
     const [isMobile, setIsMobile] = useState<boolean>(false);
 
-    useLayoutEffect(() => setIsMobile(navigator.userAgent.indexOf('Mobi') > -1), []);
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+        setIsMobile(navigator.userAgent.indexOf('Mobi') > -1);
+    }, []);
     return (
         <Layout type="CONTACT" isMobile={isMobile}>
             <div className={styles.wrapper}>

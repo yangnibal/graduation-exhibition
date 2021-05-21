@@ -146,7 +146,10 @@ function Home() {
         }
         return returnArchive;
     };
-    useLayoutEffect(() => setIsMobile(navigator.userAgent.indexOf('Mobi') > -1), []);
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+        setIsMobile(navigator.userAgent.indexOf('Mobi') > -1);
+    }, []);
     return (
         <Layout type="HOME" isMobile={isMobile}>
             <div className={styles.wrapper}>
