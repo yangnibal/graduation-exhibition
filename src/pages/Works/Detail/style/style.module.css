@@ -1,3 +1,130 @@
-.wrapper{
-    
+.wrapper {
+    font-family: SpoqaHanSans;
+}
+
+.bannerWrapper {
+    width: 100%;
+}
+.banner {
+    margin-top: 80px;
+    width: 100%;
+}
+
+.content {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.articleProfile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px auto 100px auto;
+}
+.profileText {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+.profileText .author {
+    font-size: 17px;
+    margin: 0 0 2px 0;
+}
+.profileText .socialWrapper {
+}
+.profileText .socialWrapper .mailWrapper {
+    display: flex;
+    flex-direction: column;
+}
+.profileText .socialWrapper .social {
+    font-size: 13px;
+}
+.profileText .socialWrapper .social:first-child {
+    margin-right: 20px;
+}
+.profileText .articleInfo {
+}
+.profileText .articleInfo .title {
+    font-size: 34px;
+}
+.profileText .articleInfo .describe {
+    font-size: 17px;
+    text-overflow: ellipsis;
+}
+.profileImageWrapper {
+    width: 170px;
+}
+.profileImageWrapper .profileImage {
+    width: 100%;
+}
+
+.articles {
+    width: 100%;
+}
+.article {
+    width: 100%;
+}
+@media (min-width: 425px) and (max-width: 1366px) {
+    .content {
+        width: 1080px;
+    }
+    .profileText {
+        width: 650px;
+    }
+}
+@media (max-width: 425px) {
+    .banner {
+        margin-top: 72px;
+        width: 100%;
+    }
+    .content {
+        width: 380px;
+    }
+    .articleProfile {
+        margin: 20px auto 15px auto;
+    }
+    .profileText .socialWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .profileText .socialWrapper .mailWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .profileText .articleInfo .title {
+        font-size: 20px;
+    }
+    .profileText .articleInfo .describe {
+        font-size: 13px;
+    }
+    .profileImageWrapper {
+        width: 90px;
+    }
+    .profileImagesWrapper {
+        display: grid;
+        gap: 0 10px;
+        grid-template-columns: 60px 60px;
+        grid-template-rows: 60px 60px;
+    }
+    .profileImageWrapper .profileImage,
+    .profileImagesWrapper .profileImage {
+        width: 100%;
+    }
+}
+@media (max-width: 375px) {
+    .content {
+        width: calc(100% - 30px);
+        margin: 0 15px;
+    }
+    .profileText .author {
+        font-size: 14px;
+    }
+    .profileText .articleInfo .title {
+        font-size: 16px;
+    }
+    .profileText .articleInfo .describe {
+        font-size: 13px;
+    }
 }
