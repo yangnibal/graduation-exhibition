@@ -72,7 +72,8 @@
 }
 @media (min-width: 425px) and (max-width: 1366px) {
     .content {
-        width: 1080px;
+        width: calc(100vw - 30px);
+        margin: 15px;
     }
     .profileText {
         width: 650px;
@@ -85,14 +86,26 @@
     }
     .content {
         width: 380px;
+        margin: 15px;
     }
     .articleProfile {
         margin: 20px auto 15px auto;
+    }
+    .socialWrapper {
+        
+    }
+    .social {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: calc(100vw - 160px);
+        color: #000000;
     }
     .profileText .socialWrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: calc(100vw - 30px);
     }
     .profileText .socialWrapper .mailWrapper {
         display: flex;

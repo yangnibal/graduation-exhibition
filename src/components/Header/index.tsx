@@ -23,7 +23,7 @@ const Header: React.FC<Props> = ({ type, isMobile }) => {
                     <Link to="/" className={type === 'HOME' ? styles.textBld : styles.textNml}>
                         HOME
                     </Link>
-                    <Link to="/works" className={type === 'WORKS' ? styles.textBld : styles.textNml}>
+                    <Link to="/works?category=0" className={type === 'WORKS' ? styles.textBld : styles.textNml}>
                         WORKS
                     </Link>
                     <Link to="/contact" className={type === 'CONTACT' ? styles.textBld : styles.textNml}>

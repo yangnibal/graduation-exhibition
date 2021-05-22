@@ -24,7 +24,7 @@ const Tabbar: React.FC<Props> = ({ type }) => {
                 )}
             </Link>
             <Link
-                to={type === 'LANDING' ? '/' : '/works'}
+                to={type === 'LANDING' ? '/' : '/works?category=0'}
                 className={type === 'WORKS' ? styles.textBld : styles.textNml}>
                 {type === 'WORKS' || type === 'CONTENT' ? (
                     <img src={SelWork} className={styles.navItem} />
