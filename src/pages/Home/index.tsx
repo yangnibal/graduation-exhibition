@@ -38,7 +38,7 @@ function Home() {
     const history = useHistory()
 
     const onClickArc = (index: number) => {
-        history.push(`/works?category=${index}`)
+        history.push(`/works?category=${index + 1}`)
     }
 
     const archives = [
