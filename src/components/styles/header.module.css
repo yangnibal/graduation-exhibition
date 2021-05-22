@@ -22,6 +22,7 @@
     height: 40px;
     margin-right: 300px;
     position: relative;
+    cursor: pointer;
 }
 .textContainer {
     width: 50%;

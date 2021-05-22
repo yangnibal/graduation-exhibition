@@ -24,6 +24,7 @@ import ArcGame from '../../assets/images/common/archive/game.png';
 import ArcBranding from '../../assets/images/common/archive/branding.png';
 import ArcIllust from '../../assets/images/common/archive/illust.png';
 import ArcProduct from '../../assets/images/common/archive/product.png';
+import { useHistory } from 'react-router-dom';
 
 function Home() {
     smoothscroll.polyfill();
@@ -33,6 +34,12 @@ function Home() {
     const scrollWrapBoxRef = useRef<HTMLDivElement>(null);
     const archiveWrapRef = useRef<HTMLDivElement>(null);
     const archiveRef = useRef<HTMLDivElement>(null);
+
+    const history = useHistory()
+
+    const onClickArc = (index: number) => {
+        history.push(`/works?category=${index}`)
+    }
 
     const archives = [
         {
@@ -223,7 +230,7 @@ function Home() {
                         ) : (
                             <div className={styles.boxWrapper} ref={archiveWrapRef}>
                                 {archives.map((el, i) => (
-                                    <article className={styles.box} key={i} ref={archiveRef}>
+                                    <article className={styles.box} onClick={() => onClickArc(i)} key={i} ref={archiveRef}>
                                         <img src={el.img} className={styles.boxImg} />
                                         {el.desc}
                                     </article>

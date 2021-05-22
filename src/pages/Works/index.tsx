@@ -1,5 +1,6 @@
-import { useState, useLayoutEffect } from 'react';
-import { useHistory } from 'react-router';
+import { useState, useLayoutEffect, useEffect } from 'react';
+import { RouteComponentProps, RouteProps, useHistory, useLocation, useParams, useRouteMatch } from 'react-router-dom';
+import qs from 'qs'
 
 import Layout from '../../components/Layout';
 import styles from './style/style.module.css';
@@ -31,67 +32,74 @@ import BannerBrandingMobile from '../../assets/images/mobile/banner/branding.png
 import BannerIllustMobile from '../../assets/images/mobile/banner/illust.png';
 import BannerProductMobile from '../../assets/images/mobile/banner/product.png';
 
+interface ParamTypes {
+    category: string
+}
+
+const categories = [
+    {
+        label: 'ALL',
+        value: '',
+        pcBanner: BannerAllPc,
+        mobileBanner: BannerAllMobile,
+    },
+    {
+        label: '3D',
+        value: '3D',
+        pcBanner: Banner3DPc,
+        mobileBanner: Banner3DMobile,
+    },
+    {
+        label: 'MOTION',
+        value: 'MOTION GRAPHICS',
+        pcBanner: BannerMotionPc,
+        mobileBanner: BannerMotionMobile,
+    },
+    {
+        label: 'VIDEO',
+        value: 'VIDEO',
+        pcBanner: BannerVideoPc,
+        mobileBanner: BannerVideoMobile,
+    },
+    {
+        label: 'UI/UX',
+        value: 'UI/UX',
+        pcBanner: BannerUiPc,
+        mobileBanner: BannerUiMobile,
+    },
+    {
+        label: 'GRAPHIC',
+        value: 'GRAPHIC DESIGN',
+        pcBanner: BannerGraphicPc,
+        mobileBanner: BannerGraphicMobile,
+    },
+    {
+        label: 'BRANDING',
+        value: 'BRANDING',
+        pcBanner: BannerBrandingPc,
+        mobileBanner: BannerBrandingMobile,
+    },
+    {
+        label: 'ILLUSTRATION',
+        value: 'ILLUSTRATION',
+        pcBanner: BannerIllustPc,
+        mobileBanner: BannerIllustMobile,
+    },
+    {
+        label: 'PRODUCT',
+        value: 'PRODUCT',
+        pcBanner: BannerProductPc,
+        mobileBanner: BannerProductMobile,
+    },
+];
+
 function Works() {
+
     const [selected, setSelected] = useState(0);
     const [isMobile, setIsMobile] = useState<boolean>(false);
     const history = useHistory();
 
-    const categories = [
-        {
-            label: 'ALL',
-            value: '',
-            pcBanner: BannerAllPc,
-            mobileBanner: BannerAllMobile,
-        },
-        {
-            label: '3D',
-            value: '3D',
-            pcBanner: Banner3DPc,
-            mobileBanner: Banner3DMobile,
-        },
-        {
-            label: 'MOTION',
-            value: 'MOTION GRAPHICS',
-            pcBanner: BannerMotionPc,
-            mobileBanner: BannerMotionMobile,
-        },
-        {
-            label: 'VIDEO',
-            value: 'VIDEO',
-            pcBanner: BannerVideoPc,
-            mobileBanner: BannerVideoMobile,
-        },
-        {
-            label: 'UI/UX',
-            value: 'UI/UX',
-            pcBanner: BannerUiPc,
-            mobileBanner: BannerUiMobile,
-        },
-        {
-            label: 'GRAPHIC',
-            value: 'GRAPHIC DESIGN',
-            pcBanner: BannerGraphicPc,
-            mobileBanner: BannerGraphicMobile,
-        },
-        {
-            label: 'BRANDING',
-            value: 'BRANDING',
-            pcBanner: BannerBrandingPc,
-            mobileBanner: BannerBrandingMobile,
-        },
-        {
-            label: 'ILLUSTRATION',
-            value: 'ILLUSTRATION',
-            pcBanner: BannerIllustPc,
-            mobileBanner: BannerIllustMobile,
-        },
-        {
-            label: 'PRODUCT',
-            value: 'PRODUCT',
-            pcBanner: BannerProductPc,
-            mobileBanner: BannerProductMobile,
-        },
-    ];
+    const location = useLocation()
 
     const contents = [
         {
@@ -107,7 +115,12 @@ function Works() {
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
         setIsMobile(navigator.userAgent.indexOf('Mobi') > -1);
+        const category = qs.parse(location.search, {
+            ignoreQueryPrefix: true
+        })
+        setSelected(Number(category.category))
     }, []);
+
     return (
         <Layout type="WORKS" isMobile={isMobile}>
             <div className={styles.wrapper}>
@@ -126,7 +139,7 @@ function Works() {
                         <div
                             className={selected === i ? styles.categorySelected : styles.categoryNml}
                             key={i}
-                            onClick={() => setSelected(i)}>
+                            onClick={() => { setSelected(i); history.push(`/works?category=${i}`) }}>
                             {el.label}
                         </div>
                     ))}

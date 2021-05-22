@@ -61,7 +61,7 @@ function Detail() {
                                             {item}
                                         </span>
                                     ))}
-                                    {article?.blog && <span className={styles.social}>{article.blog}</span>}
+                                    {article?.blog && <a target="blank" href={article.blog} className={styles.social}>{article.blog}</a>}
                                 </div>
                                 {isMobile && (
                                     <div
