@@ -118,7 +118,12 @@ function Works() {
         const category = qs.parse(location.search, {
             ignoreQueryPrefix: true
         })
-        setSelected(Number(category.category))
+        if(category.category){
+            setSelected(Number(category.category))
+        } else {
+            history.push('/works?category=0')
+        }
+        
     }, []);
 
     return (
