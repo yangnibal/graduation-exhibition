@@ -50,7 +50,7 @@ function Works() {
             mobileBanner: Banner3DMobile,
         },
         {
-            label: 'MOTION GRAPHICS',
+            label: 'MOTION',
             value: 'MOTION GRAPHICS',
             pcBanner: BannerMotionPc,
             mobileBanner: BannerMotionMobile,
@@ -68,16 +68,10 @@ function Works() {
             mobileBanner: BannerUiMobile,
         },
         {
-            label: 'GRAPHIC DESIGN',
+            label: 'GRAPHIC',
             value: 'GRAPHIC DESIGN',
             pcBanner: BannerGraphicPc,
             mobileBanner: BannerGraphicMobile,
-        },
-        {
-            label: 'GAME',
-            value: 'GAME',
-            pcBanner: BannerGamePc,
-            mobileBanner: BannerGameMobile,
         },
         {
             label: 'BRANDING',
@@ -159,7 +153,7 @@ function Works() {
                                                         src={`https://sunrin-graphics.s3.ap-northeast-2.amazonaws.com/2021/${id}_profile.png`}
                                                         className={styles.contentUserProfileImg}
                                                     />
-                                                    {article.studentId.length > 1 && isMobile ? null : (
+                                                    {article.studentId.length < 2 && (
                                                         <p className={styles.contentUsername}>
                                                             {article.author[idx]}
                                                         </p>
