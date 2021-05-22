@@ -52,6 +52,11 @@
     font-size: 17px;
     text-overflow: ellipsis;
 }
+.profileText .articleInfo .describeLink {
+    font-size: 17px;
+    text-overflow: ellipsis;
+    color: #000000;
+}
 .profileImageWrapper {
     width: 170px;
 }
@@ -98,6 +103,11 @@
     }
     .profileText .articleInfo .describe {
         font-size: 13px;
+    }
+    .profileText .articleInfo .describeLink {
+        font-size: 13px;
+        cursor: pointer;
+        margin-top: 5px;
     }
     .profileImageWrapper {
         width: 90px;

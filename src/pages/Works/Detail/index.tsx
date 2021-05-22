@@ -83,6 +83,7 @@ function Detail() {
                             <div className={styles.articleInfo}>
                                 <h1 className={styles.title}>{article?.articleName}</h1>
                                 <p className={styles.describe}>{article?.articleDesc}</p>
+                                {article?.articleDescLink && <a target="blank" href={article.articleDescLink} className={styles.describeLink}>{article.articleDescLink}</a>}
                             </div>
                         </div>
                         {!isMobile && (
