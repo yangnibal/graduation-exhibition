@@ -52,7 +52,8 @@
     letter-spacing: 0.5px;
     color: #3f3d56;
     margin-top: 14px;
-    line-height: 15px;
+    /* line-height: 15px; */
+    line-height: 1.6;
 }
 .socialImgWrapper {
     display: flex;
