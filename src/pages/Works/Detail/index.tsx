@@ -4,16 +4,21 @@ import YouTube from 'react-youtube';
 import Layout from '../../../components/Layout';
 import styles from './style/style.module.css';
 import articles from '../../../articles.json';
+import { RouteComponentProps, useLocation } from 'react-router';
 
-function Detail() {
+interface ParamType {
+    id: string
+}
+
+function Detail({ match }: RouteComponentProps<ParamType>) {
     const [isMobile, setIsMobile] = useState<boolean>(false);
 
     const innerWidth = window.innerWidth;
     let youtubeIframeSize = { width: '0', height: '0' };
     const s3Url = `https://sunrin-graphics.s3.ap-northeast-2.amazonaws.com/2021`;
-    const path = window.location.pathname.split('/')[2];
+    //const path = window.location.pathname.split('/')[2];
     const article = articles.find((item) => {
-        if (item.id === path) return true;
+        if (item.id === match.params.id) return true;
     });
 
     if (1366 < innerWidth) {
