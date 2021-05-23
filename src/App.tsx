@@ -7,7 +7,7 @@ import './styles/index.css';
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/2021">
             <Switch>
                 <Route exact path="/" component={Routes.Home} />
                 {/*<Route exact path="/" component={Routes.Landing} />*/}
