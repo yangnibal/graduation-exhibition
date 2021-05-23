@@ -2,7 +2,9 @@
     font-family: SpoqaHanSans;
     margin-bottom: 100px;
 }
-
+a {
+    color: #000000;
+}
 .bannerWrapper {
     width: 100%;
 }

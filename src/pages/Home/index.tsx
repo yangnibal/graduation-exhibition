@@ -51,6 +51,7 @@ function Home() {
                     DESIGN
                 </div>
             ),
+            i: 1
         },
         {
             img: ArcMotion,
@@ -61,10 +62,12 @@ function Home() {
                     GRAPHICS
                 </div>
             ),
+            i: 2
         },
         {
             img: ArcVideo,
             desc: <div className={styles.boxDesc}>VIDEO</div>,
+            i: 3
         },
         {
             img: ArcUi,
@@ -75,6 +78,7 @@ function Home() {
                     DESIGN
                 </div>
             ),
+            i: 4
         },
         {
             img: ArcGraphic,
@@ -85,6 +89,7 @@ function Home() {
                     DESIGN
                 </div>
             ),
+            i: 5
         },
         {
             img: ArcGame,
@@ -95,10 +100,12 @@ function Home() {
                     DESIGN
                 </div>
             ),
+            i: 6
         },
         {
             img: ArcBranding,
             desc: <div className={styles.boxDesc}>BRANDING</div>,
+            i: 7
         },
         {
             img: ArcIllust,
@@ -109,6 +116,7 @@ function Home() {
                     DESIGN
                 </div>
             ),
+            i: 8
         },
         {
             img: ArcProduct,
@@ -119,6 +127,7 @@ function Home() {
                     DESIGN
                 </div>
             ),
+            i: 9
         },
     ];
     const handleScroll = (direction: boolean) => {
@@ -144,8 +153,9 @@ function Home() {
     const mobileArchive = ({ index, length }: { index: number; length: number }) => {
         let returnArchive = [];
         for (var j = index; j < length; j++) {
+            let i = j
             returnArchive.push(
-                <article className={styles.box} key={index}>
+                <article className={styles.box} key={j} onClick={() => onClickArc(i)}>
                     <img src={archives[j].img} className={styles.boxImg} />
                     {archives[j].desc}
                 </article>
@@ -197,11 +207,11 @@ function Home() {
                         </p>
                         {!isMobile && (
                             <div className={styles.buttonWrapper}>
-                                <div className={styles.demoButton}>
+                                <div className={styles.demoButton} onClick={() => window.open("https://youtu.be/-2tZurIA05k")}>
                                     <img src={Video} className={styles.ic} />
                                     WATCH A DEMO
                                 </div>
-                                <div className={styles.exhibitionButton}>GO TO EXHIBITION</div>
+                                <div className={styles.exhibitionButton} onClick={() => history.push('/works?category=0')}>GO TO EXHIBITION</div>
                             </div>
                         )}
                     </div>

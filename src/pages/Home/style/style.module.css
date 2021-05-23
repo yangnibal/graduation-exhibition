@@ -157,6 +157,7 @@
     background-color: #ffffff;
     padding: 13px 13px 32px;
     margin: 0 35px;
+    cursor: pointer;
 }
 .boxImg {
     width: 238px;
