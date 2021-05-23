@@ -64,9 +64,17 @@ const Footer = () => {
                     </div>
                     <div className={styles.sectionRight}>
                         <div className={styles.socialImgWrapper}>
-                            <img src={Youtube} className={styles.socialImg} />
-                            <img src={Facebook} className={styles.socialImg} />
-                            <img src={Sunrin} className={styles.socialImg} />
+                            <a href="https://youtube.com/channel/UCgA1rjucR0YvbZfnYIDzk1Q" target="_blank">
+                                <img src={Youtube} className={styles.socialImg} />
+                            </a>
+                            <a
+                                href="https://www.facebook.com/299516397652057/posts/817224979214527/?d=n"
+                                target="_blank">
+                                <img src={Facebook} className={styles.socialImg} />
+                            </a>
+                            <a href="http://sunrint.hs.kr/index.do" target="_blank">
+                                <img src={Sunrin} className={styles.socialImg} />
+                            </a>
                         </div>
                     </div>
                 </div>
