@@ -1,6 +1,13 @@
 import { useState, useLayoutEffect, useEffect } from 'react';
-import { RouteComponentProps, RouteProps, useHistory, useLocation, useParams, useRouteMatch } from 'react-router-dom';
-import qs from 'qs'
+import {
+    RouteComponentProps,
+    RouteProps,
+    useHistory,
+    useLocation,
+    useParams,
+    useRouteMatch,
+} from 'react-router-dom';
+import qs from 'qs';
 
 import Layout from '../../components/Layout';
 import styles from './style/style.module.css';
@@ -33,7 +40,7 @@ import BannerIllustMobile from '../../assets/images/mobile/banner/illust.png';
 import BannerProductMobile from '../../assets/images/mobile/banner/product.png';
 
 interface ParamTypes {
-    category: string
+    category: string;
 }
 
 const categories = [
@@ -94,12 +101,11 @@ const categories = [
 ];
 
 function Works() {
-
     const [selected, setSelected] = useState(0);
     const [isMobile, setIsMobile] = useState<boolean>(false);
     const history = useHistory();
 
-    const location = useLocation()
+    const location = useLocation();
 
     const contents = [
         {
@@ -116,14 +122,13 @@ function Works() {
         window.scrollTo(0, 0);
         setIsMobile(navigator.userAgent.indexOf('Mobi') > -1);
         const category = qs.parse(location.search, {
-            ignoreQueryPrefix: true
-        })
-        if(category.category){
-            setSelected(Number(category.category))
+            ignoreQueryPrefix: true,
+        });
+        if (category.category) {
+            setSelected(Number(category.category));
         } else {
-            history.push('/works?category=0')
+            history.push('/works?category=0');
         }
-        
     }, []);
 
     return (
@@ -144,7 +149,10 @@ function Works() {
                         <div
                             className={selected === i ? styles.categorySelected : styles.categoryNml}
                             key={i}
-                            onClick={() => { setSelected(i); history.push(`/works?category=${i}`) }}>
+                            onClick={() => {
+                                setSelected(i);
+                                history.push(`/works?category=${i}`);
+                            }}>
                             {el.label}
                         </div>
                     ))}
@@ -153,7 +161,7 @@ function Works() {
                     {articles.map((article, i) => {
                         return (
                             (categories[selected].label === 'ALL' ||
-                                article.field === categories[selected].label) && (
+                                article.field === categories[selected].value) && (
                                 <div
                                     className={styles.content}
                                     onClick={() => handleRedirect(article.id)}
