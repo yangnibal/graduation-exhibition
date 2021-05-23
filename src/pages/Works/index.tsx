@@ -174,7 +174,7 @@ function Works() {
                                         <p className={styles.contentTitle}>{article.articleName}</p>
                                         <div className={styles.contentUserWrapper}>
                                             {article.studentId.map((id, idx) => (
-                                                <div className={styles.contentUser}>
+                                                <div className={styles.contentUser} key={idx}>
                                                     <img
                                                         src={`https://sunrin-graphics.s3.ap-northeast-2.amazonaws.com/2021/${id}_profile.png`}
                                                         className={styles.contentUserProfileImg}
