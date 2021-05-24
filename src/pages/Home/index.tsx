@@ -1,5 +1,6 @@
 import { useState, useLayoutEffect, useRef } from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
+import { RouteComponentProps, useLocation } from 'react-router';
 
 import Layout from '../../components/Layout';
 import styles from './style/style.module.css';
@@ -26,7 +27,11 @@ import ArcIllust from '../../assets/images/common/archive/illust.png';
 import ArcProduct from '../../assets/images/common/archive/product.png';
 import { useHistory } from 'react-router-dom';
 
-function Home() {
+interface ParamType {
+    id: string;
+}
+
+function Home({ match }: RouteComponentProps<ParamType>) {
     smoothscroll.polyfill();
     const [isMobile, setIsMobile] = useState<boolean>(false);
     const [scrollX, setScrollX] = useState<number>(0);
@@ -36,6 +41,7 @@ function Home() {
     const archiveRef = useRef<HTMLDivElement>(null);
 
     const history = useHistory();
+    const location = useLocation();
 
     const onClickArc = (index: number) => {
         history.push(`/works?category=${index + 1}`);
@@ -155,6 +161,10 @@ function Home() {
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
         setIsMobile(navigator.userAgent.indexOf('Mobi') > -1);
+        console.log(match.path);
+        if (location.pathname.length > 1) {
+            history.push('/');
+        }
     }, []);
     return (
         <Layout type="HOME" isMobile={isMobile}>

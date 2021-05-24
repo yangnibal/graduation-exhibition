@@ -1,6 +1,6 @@
 [
     {
-        "id": "illustration-1",
+        "id": "illustration1",
         "studentId": ["31001"],
         "thumbnail": "31001_thumbnail.png",
         "youtubeUrl": null,
@@ -11,16 +11,10 @@
         "field": "ILLUSTRATION",
         "articleName": "GothT",
         "articleDesc": "goth+ghosT=GothT\n특이한 스타일을 좋아하던 나는 점점 다양화되는 시대임에도 각자의 개성을 존중해 주지 않는 것에 의아함을 느꼈다. 이 작품이 눈길을 끌어 많은 이들에게 고스룩의 존재를 인식시킨다면, 넓은 견해로 세상을 바라볼 수 있지 않을까? 흔히 말하는 ‘비주류’에 관한 사람들의 인식이 어쩌면 바뀔 수 있지 않을까. 일반적이라는 말의 기준은 자신이 정하는 것이다. 마이너한 우리는 비정상이 아닌, 조금 특별한 사람일 뿐이라는 것을 기억하자. 사회의 시선에 획일화되어 각자의 개성을 잃지 않기를.",
-        "articleImages": [
-            "31001_img_1.jpg",
-            "31001_img_2.png",
-            "31001_img_3.png",
-            "31001_img_4.png",
-            "31001_img_5.png"
-        ]
+        "articleImages": ["31001_img_2.png", "31001_img_3.png", "31001_img_4.png", "31001_img_5.png"]
     },
     {
-        "id": "illustration-2",
+        "id": "illustration2",
         "studentId": ["31002"],
         "thumbnail": "31002_thumbnail.png",
         "youtubeUrl": null,
@@ -34,7 +28,7 @@
         "articleImages": ["31002_img_1.png"]
     },
     {
-        "id": "product-1",
+        "id": "product1",
         "studentId": ["31003"],
         "thumbnail": "31003_thumbnail.jpg",
         "youtubeUrl": null,
@@ -48,7 +42,7 @@
         "articleImages": ["31003_img_1.jpg", "31003_img_2.jpg", "31003_img_3.jpg", "31003_img_4.jpg"]
     },
     {
-        "id": "video-1",
+        "id": "video1",
         "studentId": ["31004"],
         "thumbnail": "31004_thumbnail.jpg",
         "youtubeUrl": "jorWqxSohGA",
@@ -62,7 +56,7 @@
         "articleImages": ["31004_img_1.jpg", "31004_img_2.jpg", "31004_img_3.jpg", "31004_img_4.jpg"]
     },
     {
-        "id": "illustration-3",
+        "id": "illustration3",
         "studentId": ["31005"],
         "thumbnail": "31005_thumbnail.png",
         "youtubeUrl": null,
@@ -82,16 +76,16 @@
         ]
     },
     {
-        "id": "illustration-4",
+        "id": "illustration4",
         "studentId": ["31006"],
         "thumbnail": "31006_thumbnail.jpg",
         "youtubeUrl": null,
         "bannerImages": ["31006_banner_mobile.jpg", "31006_banner_pc.jpg"],
         "author": ["박지형"],
-        "mail": ["sidsidsid328@naver.com"],
+        "mail": ["sidsidsid328@naver.co"],
         "blog": null,
         "field": "ILLUSTRATION",
-        "articleName": "어떤 심정(150*100 엽서) / \n의미 없는 그림 (a1 일러스트)",
+        "articleName": "의미 없는 그림 / 어떤 심정",
         "articleDesc": "어떤 감정 / \n 내가 바라는 나의 모습들.\n우울은 온갖 잡생각을 머릿속에 가져다놓고, 난 그것들을 그림으로 풀어낸다.\n\n의미 없는 그림 / \n 누군가 나의 부정적인 감정에 대해 이유를 물어볼 때면, 난 살짝 고민하다 '그냥'이라 답하곤 한다.\n때론 이유가 너무 많아서 설명하기 힘들기에. ",
         "articleImages": [
             "31006_img_1.jpg",
@@ -103,7 +97,7 @@
         ]
     },
     {
-        "id": "motiongraphic-1",
+        "id": "motiongraphic1",
         "studentId": ["31007"],
         "thumbnail": "31007_thumbnail.jpg",
         "youtubeUrl": "OzADccGcV4Y",
@@ -117,7 +111,7 @@
         "articleImages": ["31007_img_1.jpg", "31007_img_2.jpg"]
     },
     {
-        "id": "motiongraphic-2",
+        "id": "motiongraphic2",
         "studentId": ["31008"],
         "thumbnail": "31008_thumbnail.png",
         "youtubeUrl": "RGBGd4vEcnU",
@@ -131,7 +125,7 @@
         "articleImages": ["31008_img_1.png", "31008_img_2.png", "31008_img_3.png"]
     },
     {
-        "id": "illustration-5",
+        "id": "illustration5",
         "studentId": ["31009"],
         "thumbnail": "31009_thumbnail.jpg",
         "youtubeUrl": null,
@@ -152,7 +146,7 @@
         ]
     },
     {
-        "id": "illustration-6",
+        "id": "illustration6",
         "studentId": ["31010"],
         "thumbnail": "31010_thumbnail.png",
         "youtubeUrl": null,
@@ -166,7 +160,7 @@
         "articleImages": ["31010_img_1.png", "31010_img_2.png"]
     },
     {
-        "id": "branding-1",
+        "id": "branding1",
         "studentId": ["31011"],
         "thumbnail": "31011_thumbnail.jpg",
         "youtubeUrl": null,
@@ -180,7 +174,7 @@
         "articleImages": ["31011_img_1.jpg", "31011_img_2.jpg"]
     },
     {
-        "id": "video-2",
+        "id": "video2",
         "studentId": ["31012", "31017", "31021"],
         "thumbnail": "31012_17_21_thumbnail.png",
         "youtubeUrl": null,
@@ -199,7 +193,7 @@
         ]
     },
     {
-        "id": "motiongraphic-11",
+        "id": "motiongraphic-1",
         "studentId": ["31013"],
         "thumbnail": "31013_thumbnail.jpg",
         "youtubeUrl": null,
@@ -213,7 +207,7 @@
         "articleImages": ["31013_img_1.jpg", "31013_img_2.jpg", "31013_img_3.jpg"]
     },
     {
-        "id": "motiongraphic-4",
+        "id": "motiongraphic4",
         "studentId": ["31015", "31016", "31024"],
         "thumbnail": "31015_16_24_thumbnail.png",
         "youtubeUrl": "KX2NjCp7qFw",
@@ -227,7 +221,7 @@
         "articleImages": ["31015_16_24_img_1.png", "31015_16_24_img_2.png", "31015_16_24_img_3.png"]
     },
     {
-        "id": "video-3",
+        "id": "video3",
         "studentId": ["31017"],
         "thumbnail": "31017_thumbnail.png",
         "youtubeUrl": "vNNQBVCvwtk",
@@ -241,7 +235,7 @@
         "articleImages": ["31017_img_1.png", "31017_img_2.png", "31017_img_3.png"]
     },
     {
-        "id": "uiux-1",
+        "id": "uiux1",
         "studentId": ["31019"],
         "thumbnail": "31019_thumbnail_pc.png",
         "youtubeUrl": null,
@@ -255,7 +249,7 @@
         "articleImages": ["31019_img_1.png"]
     },
     {
-        "id": "uiux-2",
+        "id": "uiux2",
         "studentId": ["31020"],
         "thumbnail": "31020_thumbnail.jpg",
         "youtubeUrl": null,
@@ -270,7 +264,7 @@
         "articleImages": ["31020_img_1.png", "31020_img_2.png"]
     },
     {
-        "id": "product-2",
+        "id": "product2",
         "studentId": ["31021"],
         "thumbnail": "31021_thumbnail.png",
         "youtubeUrl": null,
@@ -284,7 +278,7 @@
         "articleImages": ["31021_img_1.png", "31021_img_2.png", "31021_img_3.png", "31021_img_4.jpg"]
     },
     {
-        "id": "product-3",
+        "id": "product3",
         "studentId": ["31101"],
         "thumbnail": "31101_thumbnail.jpg",
         "youtubeUrl": null,
@@ -298,7 +292,7 @@
         "articleImages": ["31101_img_1.jpg"]
     },
     {
-        "id": "video-4",
+        "id": "video4",
         "studentId": ["31102", "31103", "31107"],
         "thumbnail": "31102_thumbnail.jpg",
         "youtubeUrl": "2arnGSlLNWs",
@@ -320,7 +314,7 @@
         ]
     },
     {
-        "id": "3d-1",
+        "id": "3d1",
         "studentId": ["31104"],
         "thumbnail": "31104_thumbnail.png",
         "youtubeUrl": null,
@@ -334,7 +328,7 @@
         "articleImages": ["31104_img_1.jpg"]
     },
     {
-        "id": "product-4",
+        "id": "product4",
         "studentId": ["31105"],
         "thumbnail": "31105_thumbnail.jpg",
         "youtubeUrl": null,
@@ -356,7 +350,7 @@
         ]
     },
     {
-        "id": "illustration-7",
+        "id": "illustration7",
         "studentId": ["31106"],
         "thumbnail": "31106_thumbnail.png",
         "youtubeUrl": null,
@@ -370,7 +364,7 @@
         "articleImages": ["31106_img_1.jpg", "31106_img_2.jpg"]
     },
     {
-        "id": "3d-2",
+        "id": "3d2",
         "studentId": ["31108"],
         "thumbnail": "31108_thumbnail.png",
         "youtubeUrl": null,
@@ -390,7 +384,7 @@
         ]
     },
     {
-        "id": "motiongraphic-12",
+        "id": "motiongraphic-2",
         "studentId": ["31109"],
         "thumbnail": "31109_thumbnail.png",
         "youtubeUrl": null,
@@ -404,7 +398,7 @@
         "articleImages": ["31109_img_1.jpg", "31109_img_2.png"]
     },
     {
-        "id": "product-5",
+        "id": "product5",
         "studentId": ["31110"],
         "thumbnail": "31110_thumbnail.png",
         "youtubeUrl": null,
@@ -430,7 +424,7 @@
         ]
     },
     {
-        "id": "3d-3",
+        "id": "3d3",
         "studentId": ["31111"],
         "thumbnail": "31111_thumbnail.png",
         "youtubeUrl": null,
@@ -450,7 +444,7 @@
         ]
     },
     {
-        "id": "motiongraphic-5",
+        "id": "motiongraphic5",
         "studentId": ["31112"],
         "thumbnail": "31112_thumbnail.jpg",
         "youtubeUrl": "E9ny7y12HnE",
@@ -464,7 +458,7 @@
         "articleImages": ["31112_img_1.jpg", "31112_img_2.jpg", "31112_img_3.jpg"]
     },
     {
-        "id": "illustration-8",
+        "id": "illustration8",
         "studentId": ["31113"],
         "thumbnail": "31113_thumbnail.png",
         "youtubeUrl": null,
@@ -478,7 +472,7 @@
         "articleImages": ["31113_img_1.png"]
     },
     {
-        "id": "3d-4",
+        "id": "3d4",
         "studentId": ["31115"],
         "thumbnail": "31115_thumbnail.PNG",
         "youtubeUrl": "hRVKCdu8wJs",
@@ -504,7 +498,7 @@
         ]
     },
     {
-        "id": "uiux-3",
+        "id": "uiux3",
         "studentId": ["31117"],
         "thumbnail": "31117_thumbnail.png",
         "youtubeUrl": null,
@@ -518,7 +512,7 @@
         "articleImages": ["31117_img_1.png"]
     },
     {
-        "id": "motiongraphic-6",
+        "id": "motiongraphic6",
         "studentId": ["31118"],
         "thumbnail": "31118_thumbnail.png",
         "youtubeUrl": "vM6PsHWsz5o",
@@ -532,7 +526,7 @@
         "articleImages": ["31118_img_1.png", "31118_img_2.png", "31118_img_3.png"]
     },
     {
-        "id": "motiongraphic-7",
+        "id": "motiongraphic7",
         "studentId": ["31119"],
         "thumbnail": "31119_thumbnail.png",
         "youtubeUrl": "VFCcSaT-2zI",
@@ -546,7 +540,7 @@
         "articleImages": ["31119_img_1.png", "31119_img_2.png", "31119_img_3.png"]
     },
     {
-        "id": "video-5",
+        "id": "video5",
         "studentId": ["31121", "31223"],
         "thumbnail": "31121_31223_thumbnail.png",
         "youtubeUrl": "AoB8n8nfuYU",
@@ -568,7 +562,7 @@
         ]
     },
     {
-        "id": "illustration-9",
+        "id": "illustration9",
         "studentId": ["31123"],
         "thumbnail": "31123_thumbnail.png",
         "youtubeUrl": null,
@@ -582,7 +576,7 @@
         "articleImages": ["31123_img_1.jpg"]
     },
     {
-        "id": "motiongraphic-3",
+        "id": "motiongraphic3",
         "studentId": ["31201"],
         "thumbnail": "31201_thumbnail.jpg",
         "youtubeUrl": null,
@@ -602,7 +596,7 @@
         ]
     },
     {
-        "id": "uiux-4",
+        "id": "uiux4",
         "studentId": ["31202"],
         "thumbnail": "31202_thumbnail.png",
         "youtubeUrl": null,
@@ -616,7 +610,7 @@
         "articleImages": ["31202_img_1.png"]
     },
     {
-        "id": "product-6",
+        "id": "product6",
         "studentId": ["31203"],
         "thumbnail": "31203_thumbnail.png",
         "youtubeUrl": null,
@@ -636,7 +630,7 @@
         ]
     },
     {
-        "id": "motiongraphic-8",
+        "id": "motiongraphic8",
         "studentId": ["31204"],
         "thumbnail": "31204_1_thumbnail.jpg",
         "youtubeUrl": "9KMUQ1xQ6XI",
@@ -650,7 +644,7 @@
         "articleImages": ["31204_1_img_1.png", "31204_1_img_2.jpg"]
     },
     {
-        "id": "product-7",
+        "id": "product7",
         "studentId": ["31204"],
         "thumbnail": "31204_2_thumbnail.jpg",
         "youtubeUrl": null,
@@ -664,7 +658,7 @@
         "articleImages": ["31204_2_img_1.jpg", "31204_2_img_2.jpg"]
     },
     {
-        "id": "uiux-5",
+        "id": "uiux5",
         "studentId": ["31205"],
         "thumbnail": "31205_thumbnail.jpg",
         "youtubeUrl": null,
@@ -678,7 +672,7 @@
         "articleImages": ["31205_img_01.jpg"]
     },
     {
-        "id": "illustration-10",
+        "id": "illustration-0",
         "studentId": ["31206"],
         "thumbnail": "31206_thumbnail.jpeg",
         "youtubeUrl": null,
@@ -692,7 +686,7 @@
         "articleImages": ["31206_img_1.jpeg"]
     },
     {
-        "id": "motiongraphic-9",
+        "id": "motiongraphic9",
         "studentId": ["31207"],
         "thumbnail": "31207_thumbnail.jpg",
         "youtubeUrl": "SV9XOtjWte4",
@@ -718,7 +712,7 @@
         ]
     },
     {
-        "id": "illustration-11",
+        "id": "illustration-1",
         "studentId": ["31208"],
         "thumbnail": "31208_thumbnail.jpg",
         "youtubeUrl": null,
@@ -732,7 +726,7 @@
         "articleImages": ["31208_img_1.png"]
     },
     {
-        "id": "uiux-6",
+        "id": "uiux6",
         "studentId": ["31209"],
         "thumbnail": "31209_thumbnail.jpg",
         "youtubeUrl": null,
@@ -746,7 +740,7 @@
         "articleImages": ["31209_img_1.jpg"]
     },
     {
-        "id": "illustration-12",
+        "id": "illustration-2",
         "studentId": ["31210"],
         "thumbnail": "31210_thumbnail.png",
         "youtubeUrl": null,
@@ -760,7 +754,7 @@
         "articleImages": ["31210_img_1.png", "31210_img_2.jpg", "31210_img_3.png"]
     },
     {
-        "id": "video-6",
+        "id": "video6",
         "studentId": ["31211"],
         "thumbnail": "31211_thumbnail.png",
         "youtubeUrl": "IO2L6Up6QKI",
@@ -781,7 +775,7 @@
         ]
     },
     {
-        "id": "uiux-7",
+        "id": "uiux7",
         "studentId": ["31212"],
         "thumbnail": "31212_thumbnail.png",
         "youtubeUrl": null,
@@ -795,7 +789,7 @@
         "articleImages": ["31212_img_1.png"]
     },
     {
-        "id": "illustration-13",
+        "id": "illustration-3",
         "studentId": ["31214"],
         "thumbnail": "31214_thumbnail.png",
         "youtubeUrl": null,
@@ -809,7 +803,7 @@
         "articleImages": ["31214_img_01.png"]
     },
     {
-        "id": "3d-5",
+        "id": "3d5",
         "studentId": ["31217"],
         "thumbnail": "31217_thumbnail.png",
         "youtubeUrl": "0TOrt-0yduw",
@@ -829,7 +823,7 @@
         ]
     },
     {
-        "id": "uiux-8",
+        "id": "uiux8",
         "studentId": ["31218"],
         "thumbnail": "31218_thumbnail.png",
         "youtubeUrl": null,
@@ -843,7 +837,7 @@
         "articleImages": ["31218_img_1.png", "31218_img_2.png"]
     },
     {
-        "id": "3d-6",
+        "id": "3d6",
         "studentId": ["31220"],
         "thumbnail": "31220_thumbnail.jpg",
         "youtubeUrl": null,
@@ -857,7 +851,7 @@
         "articleImages": ["31220_img_1.png", "31220_img_2.png", "31220_img_3.png"]
     },
     {
-        "id": "product-8",
+        "id": "product8",
         "studentId": ["31221"],
         "thumbnail": "31221_thumbnail.jpg",
         "youtubeUrl": null,
@@ -871,7 +865,7 @@
         "articleImages": ["31221_img_1.jpg"]
     },
     {
-        "id": "motiongraphic-10",
+        "id": "motiongraphic-0",
         "studentId": ["31222"],
         "thumbnail": "31222_thumbnail.png",
         "youtubeUrl": "JNh1SdzyJ0k",

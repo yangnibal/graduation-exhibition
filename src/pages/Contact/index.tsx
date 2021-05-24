@@ -31,7 +31,7 @@ function Contact() {
                     Tel. 713-6213 | Fax. 704-0960
                 </p>
                 {isMobile && (
-                    <div className={styles.demo}>
+                    <div className={styles.demo} onClick={() => window.open('https://youtu.be/-2tZurIA05k')}>
                         <img src={Video} className={styles.demoVideo} />
                         <b className={styles.demoDesc}>WATCH A DEMO</b>
                     </div>

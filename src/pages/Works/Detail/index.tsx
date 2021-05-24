@@ -7,7 +7,7 @@ import articles from '../../../articles.json';
 import { RouteComponentProps, useLocation } from 'react-router';
 
 interface ParamType {
-    id: string
+    id: string;
 }
 
 function Detail({ match }: RouteComponentProps<ParamType>) {
@@ -15,7 +15,7 @@ function Detail({ match }: RouteComponentProps<ParamType>) {
 
     const innerWidth = window.innerWidth;
     let youtubeIframeSize = { width: '0', height: '0' };
-    const s3Url = `https://sunrin-graphics.s3.ap-northeast-2.amazonaws.com/2021`;
+    const s3Url = `https://dpwkc2es7x8dl.cloudfront.net/2021`;
     //const path = window.location.pathname.split('/')[2];
     const article = articles.find((item) => {
         if (item.id === match.params.id) return true;
@@ -66,7 +66,11 @@ function Detail({ match }: RouteComponentProps<ParamType>) {
                                             {item}
                                         </span>
                                     ))}
-                                    {article?.blog && <a target="blank" href={article.blog} className={styles.social}>{article.blog}</a>}
+                                    {article?.blog && (
+                                        <a target="blank" href={article.blog} className={styles.social}>
+                                            {article.blog}
+                                        </a>
+                                    )}
                                 </div>
                                 {isMobile && (
                                     <div
@@ -88,7 +92,14 @@ function Detail({ match }: RouteComponentProps<ParamType>) {
                             <div className={styles.articleInfo}>
                                 <h1 className={styles.title}>{article?.articleName}</h1>
                                 <p className={styles.describe}>{article?.articleDesc}</p>
-                                {article?.articleDescLink && <a target="blank" href={article.articleDescLink} className={styles.describeLink}>{article.articleDescLink}</a>}
+                                {article?.articleDescLink && (
+                                    <a
+                                        target="blank"
+                                        href={article.articleDescLink}
+                                        className={styles.describeLink}>
+                                        {article.articleDescLink}
+                                    </a>
+                                )}
                             </div>
                         </div>
                         {!isMobile && (

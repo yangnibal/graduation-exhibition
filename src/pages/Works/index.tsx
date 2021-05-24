@@ -104,17 +104,9 @@ function Works() {
     const [selected, setSelected] = useState(0);
     const [isMobile, setIsMobile] = useState<boolean>(false);
     const history = useHistory();
-
     const location = useLocation();
 
-    const contents = [
-        {
-            profileImg: Default,
-            userProfileImg: '',
-            title: 'test',
-            username: 'test',
-        },
-    ];
+    const s3Url = `https://dpwkc2es7x8dl.cloudfront.net/2021`;
 
     const handleRedirect = (id: string) => history.push(`/works/${id}`);
 
@@ -167,7 +159,7 @@ function Works() {
                                     onClick={() => handleRedirect(article.id)}
                                     key={i}>
                                     <img
-                                        src={`https://sunrin-graphics.s3.ap-northeast-2.amazonaws.com/2021/${article.thumbnail}`}
+                                        src={`${s3Url}/${article.thumbnail}`}
                                         className={styles.contentImg}
                                     />
                                     <div className={styles.contentInfo}>
@@ -176,7 +168,7 @@ function Works() {
                                             {article.studentId.map((id, idx) => (
                                                 <div className={styles.contentUser} key={idx}>
                                                     <img
-                                                        src={`https://sunrin-graphics.s3.ap-northeast-2.amazonaws.com/2021/${id}_profile.png`}
+                                                        src={`${s3Url}/${id}_profile.png`}
                                                         className={styles.contentUserProfileImg}
                                                     />
                                                     {article.studentId.length < 2 && (

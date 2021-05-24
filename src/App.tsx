@@ -14,6 +14,7 @@ function App() {
                 <Route exact path="/works" component={Routes.Works} />
                 <Route exact path="/works/:id" component={Content} />
                 <Route exact path="/contact" component={Routes.Contact} />
+                <Route component={Routes.Home} />
             </Switch>
         </BrowserRouter>
     );
