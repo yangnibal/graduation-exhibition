@@ -15,7 +15,7 @@ function Detail({ match }: RouteComponentProps<ParamType>) {
 
     const innerWidth = window.innerWidth;
     let youtubeIframeSize = { width: '0', height: '0' };
-    const s3Url = `https://dpwkc2es7x8dl.cloudfront.net/2021`;
+    const s3Url = `https://sunrincdn.mengmota.com/2021`;
     //const path = window.location.pathname.split('/')[2];
     const article = articles.find((item) => {
         if (item.id === match.params.id) return true;

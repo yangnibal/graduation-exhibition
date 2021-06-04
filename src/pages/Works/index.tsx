@@ -106,7 +106,7 @@ function Works() {
     const history = useHistory();
     const location = useLocation();
 
-    const s3Url = `https://dpwkc2es7x8dl.cloudfront.net/2021`;
+    const s3Url = `https://sunrincdn.mengmota.com/2021`;
 
     const handleRedirect = (id: string) => history.push(`/works/${id}`);
 
